@@ -211,7 +211,7 @@ class uTrack {
     } else {
       $where = "";
     }
-    $query = "SELECT id, user_id, name, comment FROM " . self::db()->table('tracks') . " $where ORDER BY id DESC";
+    $query = "SELECT id, user_id, name, comment FROM " . self::db()->table('tracks') . " $where ORDER BY name DESC";
     try {
       $result = self::db()->query($query);
       $trackArr = [];
